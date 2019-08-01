@@ -25,9 +25,9 @@ The only actual NET 4.6+ features used were some Task helpers (Task.FromExceptio
 
 ## Install
 
-Nuget package as [System.Net.WebSockets.Client.Managed](https://www.nuget.org/packages/System.Net.WebSockets.Client.Managed/)
+Nuget package as [System.Net.WebSockets.Client.Managed](https://www.nuget.org/packages/matthid-System.Net.WebSockets.Client.Managed/)
 
-`PM> Install-Package System.Net.WebSockets.Client.Managed`
+`PM> Install-Package matthid-System.Net.WebSockets.Client.Managed`
 
 ## Usage
 
