@@ -728,7 +728,7 @@ namespace System.Net.WebSockets.Managed
 
                     // If this a text message, validate that it contains valid UTF8.
                     if (header.Opcode == MessageOpcode.Text &&
-                        !TryValidateUtf8(new ArraySegment<byte>(payloadBuffer.Array, payloadBuffer.Offset, bytesToCopy), header.Fin, _utf8TextState))
+                        !TryValidateUtf8(new ArraySegment<byte>(payloadBuffer.Array, payloadBuffer.Offset, bytesToCopy), header.Fin && header.PayloadLength == 0, _utf8TextState))
                     {
                         await CloseWithReceiveErrorAndThrowAsync(WebSocketCloseStatus.InvalidPayloadData, WebSocketError.Faulted, cancellationToken).ConfigureAwait(false);
                     }
